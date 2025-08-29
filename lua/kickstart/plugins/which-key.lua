@@ -13,7 +13,7 @@
 -- after the plugin has been loaded as `require(MODULE).setup(opts)`.
 
 return {
-  { -- Useful plugin to show you pending keybinds.
+  {                     -- Useful plugin to show you pending keybinds.
     'folke/which-key.nvim',
     event = 'VimEnter', -- Sets the loading event to 'VimEnter'
     opts = {
@@ -62,6 +62,14 @@ return {
         { '<leader>s', group = '[S]earch' },
         { '<leader>t', group = '[T]oggle' },
         { '<leader>h', group = 'Git [H]unk', mode = { 'n', 'v' } },
+        { '<leader>c', group = 'code' },
+        { '<leader>g', group = 'git' },
+        { '<leader>d', group = 'debug' },
+        { '<leader>b', group = 'buffer' },
+        { '<leader>u', group = 'ui' },
+        { '<leader>w', group = 'windows' },
+        { '<leader>t', group = 'terminal' },
+        { '<leader>p', group = 'packages' },
       },
     },
   },
