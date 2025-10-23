@@ -37,7 +37,19 @@ vim.keymap.set('n', '<C-k>', '<C-w>k', { desc = 'Move focus to the upper window'
 -- vim.keymap.set("n", "<C-S-j>", "<C-w>J", { desc = "Move window to the lower" })
 -- vim.keymap.set("n", "<C-S-k>", "<C-w>K", { desc = "Move window to the upper" })
 
+-- Terminals
+vim.keymap.set('t', '<esc><esc>', "<C-\\><C-n>", { desc = "Terminal Normal Mode" })
+vim.keymap.set("n", "<leader>tt", function()
+    require("toggleterm").toggle(1, 10, vim.fn.getcwd(), "horizontal")
+end, { desc = "Toggle Terminal" })
+-- vim.keymap.set("n", "<leader>tv", function()
+--     require("toggleterm").toggle(2, 80, vim.fn.getcwd(), "vertical")
+-- end, { desc = "Toggle vertical terminal" })
+
+
 -- Buffer Navigation
+vim.keymap.set('n', '<leader>bD', vim.cmd.bd, { desc = "Delete Buffer and Window" })
+vim.keymap.set('n', '<leader>bn', vim.cmd.bd, { desc = "Next Buffer" })
 
 -- Windows
 vim.keymap.set('n', '<leader>wd', '<C-W>c', { desc = "Delete Window" })
@@ -49,6 +61,8 @@ vim.keymap.set('n', '<leader>wJ', '<C-w>J', { desc = "Move Window Far Bottom" })
 vim.keymap.set('n', '<leader>wH', '<C-w>H', { desc = "Move Window Far Left" })
 vim.keymap.set('n', '<leader>wL', '<C-w>L', { desc = "Move Window Far Right" })
 
-
+-- Packages
+vim.keymap.set('n', '<leader>pl', vim.cmd.Lazy, { desc = "Lazy" })
+vim.keymap.set('n', '<leader>pm', vim.cmd.Mason, { desc = "Mason" })
 
 -- vim: ts=2 sts=2 sw=2 et

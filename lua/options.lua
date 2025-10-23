@@ -71,4 +71,13 @@ vim.o.scrolloff = 10
 -- See `:help 'confirm'`
 vim.o.confirm = true
 
+-- Global default indentation
+vim.o.expandtab = true  -- use spaces instead of tabs
+vim.o.shiftwidth = 2    -- number of spaces per indentation level
+vim.o.tabstop = 2       -- number of spaces a <Tab> counts for
+vim.o.softtabstop = 2   -- spaces when hitting <Tab> in insert mode
+
+-- Inlay Hints
+vim.lsp.inlay_hint.enable(true)
+
 -- vim: ts=2 sts=2 sw=2 et
