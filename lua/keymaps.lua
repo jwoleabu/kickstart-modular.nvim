@@ -39,7 +39,7 @@ vim.keymap.set('n', '<C-k>', '<C-w>k', { desc = 'Move focus to the upper window'
 
 -- Terminals
 vim.keymap.set('t', '<esc><esc>', "<C-\\><C-n>", { desc = "Terminal Normal Mode" })
-vim.keymap.set("n", "<leader>tt", function()
+vim.keymap.set("n", "<leader>t", function()
     require("toggleterm").toggle(1, 10, vim.fn.getcwd(), "horizontal")
 end, { desc = "Toggle Terminal" })
 -- vim.keymap.set("n", "<leader>tv", function()
