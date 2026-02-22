@@ -24,7 +24,7 @@ return {
       'WhoIsSethDaniel/mason-tool-installer.nvim',
 
       -- Useful status updates for LSP.
-      { 'j-hui/fidget.nvim', opts = {} },
+      { 'j-hui/fidget.nvim',    opts = {} },
 
       -- Allows extra capabilities provided by blink.cmp
       'saghen/blink.cmp',
@@ -240,6 +240,27 @@ return {
             },
           },
         },
+        buf_ls = {},
+        yamlls = {
+          settings = {
+            yaml = {
+              schemaStore = {
+                -- You must disable built-in schemaStore support if you want to use
+                -- this plugin and its advanced options like `ignore`.
+                enable = false,
+                -- Avoid TypeError: Cannot read properties of undefined (reading 'length')
+                url = "",
+              },
+              schemas = require('schemastore').yaml.schemas({
+                select = {
+                  "buf.gen.yaml",
+                  "buf.yaml",
+                },
+              }),
+            },
+          },
+
+        }
       }
 
       -- Ensure the servers and tools above are installed

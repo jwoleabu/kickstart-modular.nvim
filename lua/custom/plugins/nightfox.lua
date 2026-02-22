@@ -1,11 +1,19 @@
 return {
   {
     'EdenEast/nightfox.nvim',
-    priority = 1000, -- Make sure to load this before all the other start plugins.
+    priority = 1000,
     config = function()
-      ---@diagnostic disable-next-line: missing-fields
-      require('nightfox').setup({})
-      vim.cmd.colorscheme 'carbonfox'
+      require("nightfox").setup({
+        options = {
+          transparent = false,
+        },
+        groups = {
+          carbonfox = {
+          },
+        },
+      })
+
+      vim.cmd.colorscheme("carbonfox")
     end,
   },
 }
